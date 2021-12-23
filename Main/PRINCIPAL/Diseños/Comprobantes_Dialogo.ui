@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Comprobantes</class>
+ <widget class="QDialog" name="Comprobantes">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>407</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Comprobantes</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../Imagenes/imagenes_proyecto.qrc">
+    <normaloff>:/iconos/Principal.ico</normaloff>:/iconos/Principal.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+QPushButton{border-radius:15px;
+border:2px solid black;
+}
+
+QPushButton:hover{
+
+	background-color: rgb(2, 198, 201);
+}
+QPushButton:pressed { 
+	
+	background-color: rgb(32, 90, 143);
+	border-style: inset;
+}
+QLineEdit{
+background:transparent;
+border:none;
+border-bottom:1px solid white;
+	font: 57 12pt &quot;Roboto&quot;;
+}
+
+QDialog{
+background-color: rgb(7, 177, 189);}</string>
+  </property>
+  <widget class="QGroupBox" name="gb_DatosEmpresa">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>631</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Roboto</family>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <italic>false</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="title">
+    <string>Datos Empresa</string>
+   </property>
+   <widget class="QLabel" name="gbDE_lbl_RUC">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>30</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: bold 11pt &quot;Roboto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>RUC:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="gbDE_entry_ruc">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>20</y>
+      <width>281</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="gbDE_btn_buscarRUC">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>20</y>
+      <width>31</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-radius:15px;
+border:2px solid black;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="../../Imagenes/imagenes_proyecto.qrc">
+      <normaloff>:/iconos/search_normal.png</normaloff>:/iconos/search_normal.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>22</width>
+      <height>26</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>60</y>
+      <width>591</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lbl_numRUC">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: bold 11pt &quot;Roboto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Número RUC:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lbl_tipoCont">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>110</y>
+      <width>161</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: bold 11pt &quot;Roboto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Tipo Contribuyente:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lbl_tipoDoc">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: bold 11pt &quot;Roboto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Tipo Documento:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lbl_nombreComercial">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: bold 11pt &quot;Roboto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Nombre Comercial:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lbl_estado">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>191</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: bold 11pt &quot;Roboto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Estado:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lbl_condicion">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: bold 11pt &quot;Roboto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Condicion :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lblRS_numeroRuc">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>80</y>
+      <width>501</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>----------------------------------------------------------------------------------------------------------------------------</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lblRS_tipoContri">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>120</y>
+      <width>431</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>----------------------------------------------------------------------------------------------------------------------------</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lblRS_tipoDocumento">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>140</y>
+      <width>451</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>----------------------------------------------------------------------------------------------------------------------------</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lblRS_nombreComercial">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>170</y>
+      <width>441</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>----------------------------------------------------------------------------------------------------------------------------</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lblRS_estado">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>210</y>
+      <width>451</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>----------------------------------------------------------------------------------------------------------------------------</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="gbDE_lblRS_Condicion">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>230</y>
+      <width>451</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>----------------------------------------------------------------------------------------------------------------------------</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="gb_Elegir">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>0</y>
+     <width>631</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="title">
+    <string>Elegir</string>
+   </property>
+   <widget class="QLabel" name="gbE_lbl_comprobante">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>20</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto</family>
+      <pointsize>11</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: bold 11pt &quot;Roboto&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Comprobante:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="gbE_cb_comprobantes">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Roboto</family>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>Boleta</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Factura</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="AComprobantes_btn_guardar">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>350</y>
+     <width>141</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius:15px;
+border:2px solid black;</string>
+   </property>
+   <property name="text">
+    <string>GUARDAR</string>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Imagenes/imagenes_proyecto.qrc">
+     <normaloff>:/iconos/saveV2.png</normaloff>:/iconos/saveV2.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>50</width>
+     <height>50</height>
+    </size>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Imagenes/imagenes_proyecto.qrc"/>
+ </resources>
+ <connections/>
+</ui>
