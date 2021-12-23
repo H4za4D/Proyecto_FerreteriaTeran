@@ -1,0 +1,4294 @@
+
+(object Petal
+    version    	50
+    _written   	"Rose 2006.0.0.060314"
+    charSet    	0)
+
+(object Class_Category "Diagrama de Secuencia"
+    quid       	"5BE7CBC201C5"
+    exportControl 	"Public"
+    logical_models 	(list unit_reference_list
+	(object Class "$UNNAMED$0"
+	    quid       	"5BE7DA2F02BF")
+	(object Class "Cliente"
+	    quid       	"5BE7E0BC003E"
+	    stereotype 	"Actor")
+	(object Mechanism @1
+	    logical_models 	(list unit_reference_list
+		(object Object "Vended@r"
+		    quid       	"5BE7E0C30242"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"5BE7E14D02CF"
+			    supplier   	"Sistema"
+			    quidu      	"5BE7E0DC038A"
+			    messages   	(list Messages
+				(object Message "Ingresa credenciales"
+				    quid       	"5BE7E14D02D0"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1"
+				    ordinal    	0
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Acepta el acceso"
+				    quid       	"5BE7E1CA00AC"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"1.1.1.1.1"
+				    ordinal    	5
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Consulta Id de producto"
+				    quid       	"5BE7E204032C"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"6"
+				    ordinal    	15
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Despliega la informacion"
+				    quid       	"5BE7E26102CF"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"6.1.1.1.1"
+				    ordinal    	19
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Agrega productos al carrito"
+				    quid       	"5BE7E6BC01C5"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"6.1.1.1.1.1"
+				    ordinal    	20
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Confirma detalles del producto"
+				    quid       	"5BE7E7930119"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"7"
+				    ordinal    	21
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Genera Id de pedido"
+				    quid       	"5BE7E92801D5"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"6.2"
+				    ordinal    	27
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Retorna el registro exitoso"
+				    quid       	"5BE7E8EB0203"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"6.1"
+				    ordinal    	26
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Tipea el id de pedido"
+				    quid       	"5BE7EDC201D5"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"10"
+				    ordinal    	38
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Esoje el transportista disponible"
+				    quid       	"5BE7EFAF039A"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"12"
+				    ordinal    	43
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Escoge el apartado de Productos"
+				    quid       	"5BE7F05002DF"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"3"
+				    ordinal    	7
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Llena los campos para el registro de productos"
+				    quid       	"5BE7F08901F4"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"4"
+				    ordinal    	9
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Confirna la accion"
+				    quid       	"5BE7F0DB032C"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"5"
+				    ordinal    	11
+				    quidu      	"000000000000"
+				    creation   	FALSE)))
+			(object Link
+			    quid       	"5BE7E3D202DE"
+			    supplier   	"Vended@r"
+			    quidu      	"5BE7E0C30242")
+			(object Link
+			    quid       	"5BE7F05002DE"
+			    supplier   	"Cajer@"
+			    quidu      	"5BE7E0CA036B"))
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Object "Cajer@"
+		    quid       	"5BE7E0CA036B"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"5BE7E1A402DE"
+			    supplier   	"Sistema"
+			    quidu      	"5BE7E0DC038A"
+			    messages   	(list Messages
+				(object Message "Ingresa Credenciales"
+				    quid       	"5BE7E1A402DF"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"2"
+				    ordinal    	1
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Acepta el acceso"
+				    quid       	"5BE7E1B202A0"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"1.1.1.1.2"
+				    ordinal    	6
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Ingresa id de pedido"
+				    quid       	"5BE7E97500BB"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"8"
+				    ordinal    	28
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Muesta la informacion"
+				    quid       	"5BE7EA5601F4"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"8.1.1.1.1"
+				    ordinal    	32
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Regista el monto de pago  del pedido"
+				    quid       	"5BE7EA6D0213"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"9"
+				    ordinal    	33
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Genera comprobante de pago"
+				    quid       	"5BE7EB3600EA"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"9.2"
+				    ordinal    	37
+				    quidu      	"000000000000"
+				    creation   	FALSE))))
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Object "Sistema"
+		    quid       	"5BE7E0DC038A"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"5BE7E1840271"
+			    supplier   	"BD"
+			    quidu      	"5BE7E0F103A9"
+			    messages   	(list Messages
+				(object Message "Envia Credenciales"
+				    quid       	"5BE7E1840272"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.1"
+				    ordinal    	2
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Envia Respuesta"
+				    quid       	"5BE7E19A02DE"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"1.1.1.1"
+				    ordinal    	4
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Envia peticion"
+				    quid       	"5BE7E20F036B"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"6.1"
+				    ordinal    	16
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Devuelve detalles del producto"
+				    quid       	"5BE7E2320213"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"6.1.1.1"
+				    ordinal    	18
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Registra el pedido"
+				    quid       	"5BE7E85A01C5"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"7.1"
+				    ordinal    	23
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Envia ID de pedido"
+				    quid       	"5BE7EA1502EE"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"8.1"
+				    ordinal    	29
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Retorna datos del pedido"
+				    quid       	"5BE7EA49039A"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"8.1.1.1"
+				    ordinal    	31
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Almacena la informacion"
+				    quid       	"5BE7EAA6005E"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"9.1"
+				    ordinal    	34
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Retorna Guadado exitoso"
+				    quid       	"5BE7EB0303B9"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"9.1.1.1"
+				    ordinal    	36
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Confirma el almacenamiento pendiente de pago"
+				    quid       	"5BE7E8D8004E"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"6"
+				    ordinal    	25
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Envia Id del pedido"
+				    quid       	"5BE7EE5202DE"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"10.1"
+				    ordinal    	39
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Retorna los datos"
+				    quid       	"5BE7EE82039A"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"10.1.1"
+				    ordinal    	40
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Manda los registros"
+				    quid       	"5BE7EFC00252"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"12.1"
+				    ordinal    	44
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Confirma almacenamiento "
+				    quid       	"5BE7EFD90186"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"12.1.1"
+				    ordinal    	45
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Manda la informaciona  a guardar"
+				    quid       	"5BE7F0EA00AC"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"5.1"
+				    ordinal    	12
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Confirma almacenamiento"
+				    quid       	"5BE7F10B00EA"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"5.1.1"
+				    ordinal    	13
+				    quidu      	"000000000000"
+				    creation   	FALSE)))
+			(object Link
+			    quid       	"5BE7E5580280"
+			    supplier   	"Sistema"
+			    quidu      	"5BE7E0DC038A"
+			    messages   	(list Messages
+				(object Message "Almacena temporalmente  el pedido"
+				    quid       	"5BE7E6F702BF"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"6.1.1.1.1.1.1"
+				    ordinal    	22
+				    quidu      	"000000000000"
+				    creation   	FALSE)))
+			(object Link
+			    quid       	"5BE7EEB20290"
+			    supplier   	"Vended@r"
+			    quidu      	"5BE7E0C30242"
+			    messages   	(list Messages
+				(object Message "Muesta detalles del pedido"
+				    quid       	"5BE7EEB20291"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"10.2"
+				    ordinal    	41
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Confirma envio a domicilio y registra direccion de este"
+				    quid       	"5BE7EEC100EA"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"ToClientFromSupplier"
+				    sequence   	"11"
+				    ordinal    	42
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Muestra mensaje de guardado exitoso"
+				    quid       	"5BE7EFEC0109"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"12.2"
+				    ordinal    	46
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Retorna la ventana "
+				    quid       	"5BE7F07D0158"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"3.1"
+				    ordinal    	8
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Muestra mensaje de productos a guardar"
+				    quid       	"5BE7F0CA0196"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"4.1"
+				    ordinal    	10
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Muestra mensaje de exito"
+				    quid       	"5BE7F1210158"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Return"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"5.2"
+				    ordinal    	14
+				    quidu      	"000000000000"
+				    creation   	FALSE))))
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE)
+		(object Object "BD"
+		    quid       	"5BE7E0F103A9"
+		    collaborators 	(list link_list
+			(object Link
+			    quid       	"5BE7E18F007D"
+			    supplier   	"BD"
+			    quidu      	"5BE7E0F103A9"
+			    messages   	(list Messages
+				(object Message "Verifica Datos"
+				    quid       	"5BE7E18F007E"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"1.1.1"
+				    ordinal    	3
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Realiza la consulta"
+				    quid       	"5BE7E21A0252"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"6.1.1"
+				    ordinal    	17
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Verifica ID "
+				    quid       	"5BE7EA260119"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"8.1.1"
+				    ordinal    	30
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Ejecuta y actualiza el stock de cada producto"
+				    quid       	"5BE7EAF5036B"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"9.1.1"
+				    ordinal    	35
+				    quidu      	"000000000000"
+				    creation   	FALSE)
+				(object Message "Almacena el registro"
+				    quid       	"5BE7E8830232"
+				    frequency  	"Aperiodic"
+				    synchronization 	"Simple"
+				    dir        	"FromClientToSupplier"
+				    sequence   	"4.1.1"
+				    ordinal    	24
+				    quidu      	"000000000000"
+				    creation   	FALSE))))
+		    persistence 	"Transient"
+		    creationObj 	FALSE
+		    multi      	FALSE))))
+    logical_presentations 	(list unit_reference_list
+	(object InteractionDiagram "D_Sec_Ferreteria_Teran"
+	    mechanism_ref 	@1
+	    quid       	"5BE7CBD00232"
+	    title      	"D_Sec_Ferreteria_Teran"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	5075
+	    items      	(list diagram_item_list
+		(object InterObjView "Vended@r" @2
+		    location   	(272, 224)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	TRUE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@2
+			location   	(272, 224)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	282
+			justify    	0
+			label      	"Vended@r")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5BE7E0C30242"
+		    width      	300
+		    height     	6224
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @3
+			location   	(272, 432)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	95
+			y_coord    	5
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @4
+			location   	(272, 1120)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	90
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @5
+			location   	(272, 1408)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	836
+			y_coord    	746
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @6
+			location   	(272, 1520)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @7
+			location   	(272, 1728)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @8
+			location   	(272, 2144)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @9
+			location   	(272, 2256)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	96
+			y_coord    	6
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @10
+			location   	(272, 2688)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	202
+			y_coord    	112
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @11
+			location   	(272, 2928)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	97
+			y_coord    	7
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @12
+			location   	(272, 3664)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	90
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @13
+			location   	(272, 3776)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	90
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @14
+			location   	(272, 5344)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	1044
+			y_coord    	954
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @15
+			location   	(272, 5664)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @16
+			location   	(272, 6288)
+			line_color 	3342489
+			InterObjView 	@2
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE))
+		(object InterObjView "Cajer@" @17
+		    location   	(992, 224)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	TRUE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@17
+			location   	(992, 224)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	282
+			justify    	0
+			label      	"Cajer@")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5BE7E0CA036B"
+		    width      	300
+		    height     	4944
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @18
+			location   	(992, 544)
+			line_color 	3342489
+			InterObjView 	@17
+			height     	88
+			y_coord    	-2
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @19
+			location   	(992, 1216)
+			line_color 	3342489
+			InterObjView 	@17
+			height     	90
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @20
+			location   	(992, 3888)
+			line_color 	3342489
+			InterObjView 	@17
+			height     	212
+			y_coord    	122
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @21
+			location   	(992, 4336)
+			line_color 	3342489
+			InterObjView 	@17
+			height     	90
+			y_coord    	0
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @22
+			location   	(992, 4464)
+			line_color 	3342489
+			InterObjView 	@17
+			height     	644
+			y_coord    	554
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @23
+			location   	(992, 5008)
+			line_color 	3342489
+			InterObjView 	@17
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE))
+		(object InterObjView "Sistema" @24
+		    location   	(1808, 224)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	TRUE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@24
+			location   	(1808, 224)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	282
+			justify    	0
+			label      	"Sistema")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5BE7E0DC038A"
+		    width      	300
+		    height     	6224
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @25
+			location   	(1808, 432)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	305
+			y_coord    	215
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @26
+			location   	(1808, 544)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	90
+			y_coord    	0
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @27
+			location   	(1808, 880)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	342
+			y_coord    	252
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @28
+			location   	(1808, 1408)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	105
+			y_coord    	15
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @29
+			location   	(1808, 1616)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	107
+			y_coord    	17
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @30
+			location   	(1808, 1824)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	319
+			y_coord    	229
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @31
+			location   	(1808, 2032)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @32
+			location   	(1808, 2256)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	203
+			y_coord    	113
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @33
+			location   	(1808, 2592)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	193
+			y_coord    	103
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @34
+			location   	(1808, 2800)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	392
+			y_coord    	302
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @35
+			location   	(1808, 2928)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	394
+			y_coord    	304
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @36
+			location   	(1808, 3120)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	90
+			y_coord    	0
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @37
+			location   	(1808, 3488)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	288
+			y_coord    	198
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @38
+			location   	(1808, 3888)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	202
+			y_coord    	112
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @39
+			location   	(1808, 4224)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	199
+			y_coord    	109
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @40
+			location   	(1808, 4464)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	550
+			y_coord    	460
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @41
+			location   	(1808, 4912)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @42
+			location   	(1808, 5344)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	315
+			y_coord    	225
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @43
+			location   	(1808, 5552)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @44
+			location   	(1808, 5760)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	268
+			y_coord    	178
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @45
+			location   	(1808, 5968)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	321
+			y_coord    	231
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @46
+			location   	(1808, 6192)
+			line_color 	3342489
+			InterObjView 	@24
+			height     	1
+			y_coord    	-89
+			Nested     	TRUE))
+		(object InterObjView "BD" @47
+		    location   	(2672, 224)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	TRUE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@47
+			location   	(2672, 224)
+			fill_color 	13434879
+			anchor_loc 	1
+			nlines     	2
+			max_width  	282
+			justify    	0
+			label      	"BD")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5BE7E0F103A9"
+		    width      	300
+		    height     	6224
+		    icon_height 	0
+		    icon_width 	0
+		    icon_y_offset 	0
+		    annotation 	1
+		    Focus_Of_Control 	(object Focus_Of_Control "" @48
+			location   	(2672, 640)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	204
+			y_coord    	114
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @49
+			location   	(2672, 784)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	308
+			y_coord    	218
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @50
+			location   	(2672, 1936)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	102
+			y_coord    	12
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @51
+			location   	(2672, 2352)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	198
+			y_coord    	108
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @52
+			location   	(2672, 2480)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	200
+			y_coord    	110
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @53
+			location   	(2672, 3232)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	209
+			y_coord    	119
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @54
+			location   	(2672, 3376)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	202
+			y_coord    	112
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @55
+			location   	(2672, 4000)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	188
+			y_coord    	98
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @56
+			location   	(2672, 4128)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	308
+			y_coord    	218
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @57
+			location   	(2672, 4672)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	197
+			y_coord    	107
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @58
+			location   	(2672, 4800)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	202
+			y_coord    	112
+			Nested     	TRUE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @59
+			location   	(2672, 5456)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	202
+			y_coord    	112
+			Nested     	FALSE)
+		    Focus_Of_Control 	(object Focus_Of_Control "" @60
+			location   	(2672, 6080)
+			line_color 	3342489
+			InterObjView 	@47
+			height     	202
+			y_coord    	112
+			Nested     	FALSE))
+		(object InterMessView "Ingresa credenciales" @61
+		    location   	(16, 437)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @62
+			Parent_View 	@61
+			location   	(1039, 393)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E14D02D0"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	358
+			justify    	0
+			label      	"Ingresa credenciales"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@3
+		    Focus_Entry 	@25
+		    origin     	(287, 437)
+		    terminus   	(1792, 437)
+		    ordinal    	0)
+		(object InterMessView "Envia Credenciales" @63
+		    location   	(16, 647)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @64
+			Parent_View 	@63
+			location   	(2239, 603)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E1840272"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	332
+			justify    	0
+			label      	"Envia Credenciales"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@47
+		    Focus_Src  	@25
+		    Focus_Entry 	@48
+		    origin     	(1823, 647)
+		    terminus   	(2656, 647)
+		    ordinal    	2)
+		(object SelfMessView "Verifica Datos" @65
+		    location   	(16, 752)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @66
+			Parent_View 	@65
+			location   	(2763, 708)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E18F007E"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	235
+			justify    	0
+			label      	"Verifica Datos"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@47
+		    Focus_Src  	@48
+		    Focus_Entry 	@49
+		    origin     	(2688, 752)
+		    terminus   	(2838, 752)
+		    ordinal    	3)
+		(object InterMessView "Envia Respuesta" @67
+		    location   	(16, 882)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @68
+			Parent_View 	@67
+			location   	(2240, 838)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E19A02DE"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	294
+			justify    	0
+			label      	"Envia Respuesta"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@24
+		    Focus_Src  	@49
+		    Focus_Entry 	@27
+		    origin     	(2656, 882)
+		    terminus   	(1824, 882)
+		    ordinal    	4)
+		(object InterMessView "Ingresa Credenciales" @69
+		    location   	(16, 542)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @70
+			Parent_View 	@69
+			location   	(1399, 498)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E1A402DF"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	370
+			justify    	0
+			label      	"Ingresa Credenciales"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@17
+		    supplier   	@24
+		    Focus_Src  	@18
+		    Focus_Entry 	@26
+		    origin     	(1007, 542)
+		    terminus   	(1792, 542)
+		    ordinal    	1)
+		(object InterMessView "Acepta el acceso" @71
+		    location   	(16, 1222)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @72
+			Parent_View 	@71
+			location   	(1400, 1178)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E1B202A0"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	288
+			justify    	0
+			label      	"Acepta el acceso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@17
+		    Focus_Src  	@27
+		    Focus_Entry 	@19
+		    origin     	(1792, 1222)
+		    terminus   	(1008, 1222)
+		    ordinal    	6)
+		(object InterMessView "Acepta el acceso" @73
+		    location   	(16, 1117)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @74
+			Parent_View 	@73
+			location   	(1040, 1073)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E1CA00AC"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	288
+			justify    	0
+			label      	"Acepta el acceso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@2
+		    Focus_Src  	@27
+		    Focus_Entry 	@4
+		    origin     	(1792, 1117)
+		    terminus   	(288, 1117)
+		    ordinal    	5)
+		(object InterMessView "Consulta Id de producto" @75
+		    location   	(16, 2248)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @76
+			Parent_View 	@75
+			location   	(1039, 2204)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E204032C"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	406
+			justify    	0
+			label      	"Consulta Id de producto"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@9
+		    Focus_Entry 	@32
+		    origin     	(287, 2248)
+		    terminus   	(1792, 2248)
+		    ordinal    	15)
+		(object InterMessView "Envia peticion" @77
+		    location   	(16, 2355)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @78
+			Parent_View 	@77
+			location   	(2239, 2311)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E20F036B"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	238
+			justify    	0
+			label      	"Envia peticion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@47
+		    Focus_Src  	@32
+		    Focus_Entry 	@51
+		    origin     	(1823, 2355)
+		    terminus   	(2656, 2355)
+		    ordinal    	16)
+		(object SelfMessView "Realiza la consulta" @79
+		    location   	(16, 2460)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @80
+			Parent_View 	@79
+			location   	(2763, 2416)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E21A0252"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	323
+			justify    	0
+			label      	"Realiza la consulta"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@47
+		    Focus_Src  	@51
+		    Focus_Entry 	@52
+		    origin     	(2688, 2460)
+		    terminus   	(2838, 2460)
+		    ordinal    	17)
+		(object InterMessView "Devuelve detalles del producto" @81
+		    location   	(16, 2590)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @82
+			Parent_View 	@81
+			location   	(2240, 2546)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E2320213"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	516
+			justify    	0
+			label      	"Devuelve detalles del producto"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@24
+		    Focus_Src  	@52
+		    Focus_Entry 	@33
+		    origin     	(2656, 2590)
+		    terminus   	(1824, 2590)
+		    ordinal    	18)
+		(object InterMessView "Despliega la informacion" @83
+		    location   	(16, 2695)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @84
+			Parent_View 	@83
+			location   	(1040, 2651)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E26102CF"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	425
+			justify    	0
+			label      	"Despliega la informacion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@2
+		    Focus_Src  	@33
+		    Focus_Entry 	@10
+		    origin     	(1792, 2695)
+		    terminus   	(288, 2695)
+		    ordinal    	19)
+		(object InterMessView "Agrega productos al carrito" @85
+		    location   	(16, 2800)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @86
+			Parent_View 	@85
+			location   	(1039, 2756)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E6BC01C5"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Agrega productos al carrito"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@10
+		    Focus_Entry 	@34
+		    origin     	(287, 2800)
+		    terminus   	(1792, 2800)
+		    ordinal    	20)
+		(object SelfMessView "Almacena temporalmente  el pedido" @87
+		    location   	(16, 3102)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @88
+			Parent_View 	@87
+			location   	(1899, 3058)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E6F702BF"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	610
+			justify    	0
+			label      	"Almacena temporalmente  el pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@24
+		    Focus_Src  	@34
+		    Focus_Entry 	@36
+		    origin     	(1824, 3102)
+		    terminus   	(1974, 3102)
+		    ordinal    	22)
+		(object InterMessView "Confirma detalles del producto" @89
+		    location   	(16, 2923)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @90
+			Parent_View 	@89
+			location   	(1039, 2968)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E7930119"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	520
+			justify    	0
+			label      	"Confirma detalles del producto"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@11
+		    Focus_Entry 	@35
+		    origin     	(287, 2923)
+		    terminus   	(1792, 2923)
+		    ordinal    	21)
+		(object InterMessView "Registra el pedido" @91
+		    location   	(16, 3232)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @92
+			Parent_View 	@91
+			location   	(2237, 3091)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E85A01C5"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	313
+			justify    	0
+			label      	"Registra el pedido"
+			pctDist    	0.498164
+			height     	142
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@47
+		    Focus_Src  	@35
+		    Focus_Entry 	@53
+		    origin     	(1823, 3232)
+		    terminus   	(2656, 3232)
+		    ordinal    	23)
+		(object InterMessView "Ingresa id de pedido" @93
+		    location   	(16, 3888)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @94
+			Parent_View 	@93
+			location   	(1399, 3844)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E97500BB"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	352
+			justify    	0
+			label      	"Ingresa id de pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@17
+		    supplier   	@24
+		    Focus_Src  	@20
+		    Focus_Entry 	@38
+		    origin     	(1007, 3888)
+		    terminus   	(1792, 3888)
+		    ordinal    	28)
+		(object InterMessView "Envia ID de pedido" @95
+		    location   	(16, 3993)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @96
+			Parent_View 	@95
+			location   	(2239, 3949)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA1502EE"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	320
+			justify    	0
+			label      	"Envia ID de pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@47
+		    Focus_Src  	@38
+		    Focus_Entry 	@55
+		    origin     	(1823, 3993)
+		    terminus   	(2656, 3993)
+		    ordinal    	29)
+		(object SelfMessView "Verifica ID " @97
+		    location   	(16, 4098)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @98
+			Parent_View 	@97
+			location   	(2763, 4054)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA260119"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	172
+			justify    	0
+			label      	"Verifica ID"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@47
+		    Focus_Src  	@55
+		    Focus_Entry 	@56
+		    origin     	(2688, 4098)
+		    terminus   	(2838, 4098)
+		    ordinal    	30)
+		(object InterMessView "Retorna datos del pedido" @99
+		    location   	(16, 4228)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @100
+			Parent_View 	@99
+			location   	(2240, 4184)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA49039A"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	429
+			justify    	0
+			label      	"Retorna datos del pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@24
+		    Focus_Src  	@56
+		    Focus_Entry 	@39
+		    origin     	(2656, 4228)
+		    terminus   	(1824, 4228)
+		    ordinal    	31)
+		(object InterMessView "Muesta la informacion" @101
+		    location   	(16, 4333)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @102
+			Parent_View 	@101
+			location   	(1400, 4289)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA5601F4"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	376
+			justify    	0
+			label      	"Muesta la informacion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@17
+		    Focus_Src  	@39
+		    Focus_Entry 	@21
+		    origin     	(1792, 4333)
+		    terminus   	(1008, 4333)
+		    ordinal    	32)
+		(object InterMessView "Regista el monto de pago  del pedido" @103
+		    location   	(16, 4464)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @104
+			Parent_View 	@103
+			location   	(1399, 4420)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA6D0213"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	630
+			justify    	0
+			label      	"Regista el monto de pago  del pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@17
+		    supplier   	@24
+		    Focus_Src  	@22
+		    Focus_Entry 	@40
+		    origin     	(1007, 4464)
+		    terminus   	(1792, 4464)
+		    ordinal    	33)
+		(object InterMessView "Almacena la informacion" @105
+		    location   	(16, 4674)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @106
+			Parent_View 	@105
+			location   	(2239, 4630)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EAA6005E"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	419
+			justify    	0
+			label      	"Almacena la informacion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@47
+		    Focus_Src  	@40
+		    Focus_Entry 	@57
+		    origin     	(1823, 4674)
+		    terminus   	(2656, 4674)
+		    ordinal    	34)
+		(object SelfMessView "Ejecuta y actualiza el stock de cada producto" @107
+		    location   	(16, 4779)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @108
+			Parent_View 	@107
+			location   	(2887, 4704)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EAF5036B"
+			anchor_loc 	1
+			nlines     	2
+			max_width  	406
+			justify    	0
+			label      	"Ejecuta y actualiza el stock de cada producto"
+			pctDist    	1.326667
+			height     	76
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@47
+		    Focus_Src  	@57
+		    Focus_Entry 	@58
+		    origin     	(2688, 4779)
+		    terminus   	(2838, 4779)
+		    ordinal    	35)
+		(object InterMessView "Retorna Guadado exitoso" @109
+		    location   	(16, 4909)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @110
+			Parent_View 	@109
+			location   	(2240, 4865)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EB0303B9"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	432
+			justify    	0
+			label      	"Retorna Guadado exitoso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@24
+		    Focus_Src  	@58
+		    Focus_Entry 	@41
+		    origin     	(2656, 4909)
+		    terminus   	(1824, 4909)
+		    ordinal    	36)
+		(object InterMessView "Genera comprobante de pago" @111
+		    location   	(16, 5014)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @112
+			Parent_View 	@111
+			location   	(1400, 4970)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EB3600EA"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	507
+			justify    	0
+			label      	"Genera comprobante de pago"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@17
+		    Focus_Src  	@40
+		    Focus_Entry 	@23
+		    origin     	(1792, 5014)
+		    terminus   	(1008, 5014)
+		    ordinal    	37)
+		(object SelfMessView "Almacena el registro" @113
+		    location   	(16, 3351)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @114
+			Parent_View 	@113
+			location   	(2763, 3307)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E8830232"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	352
+			justify    	0
+			label      	"Almacena el registro"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@47
+		    Focus_Src  	@53
+		    Focus_Entry 	@54
+		    origin     	(2688, 3351)
+		    terminus   	(2838, 3351)
+		    ordinal    	24)
+		(object InterMessView "Confirma el almacenamiento pendiente de pago" @115
+		    location   	(16, 3481)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @116
+			Parent_View 	@115
+			location   	(2240, 3437)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E8D8004E"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	814
+			justify    	0
+			label      	"Confirma el almacenamiento pendiente de pago"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@24
+		    Focus_Src  	@54
+		    Focus_Entry 	@37
+		    origin     	(2656, 3481)
+		    terminus   	(1824, 3481)
+		    ordinal    	25)
+		(object InterMessView "Genera Id de pedido" @117
+		    location   	(16, 3776)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @118
+			Parent_View 	@117
+			location   	(1040, 3732)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E92801D5"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	348
+			justify    	0
+			label      	"Genera Id de pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@2
+		    Focus_Src  	@37
+		    Focus_Entry 	@13
+		    origin     	(1792, 3776)
+		    terminus   	(288, 3776)
+		    ordinal    	27)
+		(object InterMessView "Retorna el registro exitoso" @119
+		    location   	(16, 3671)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @120
+			Parent_View 	@119
+			location   	(1040, 3627)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E8EB0203"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	446
+			justify    	0
+			label      	"Retorna el registro exitoso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@2
+		    Focus_Src  	@37
+		    Focus_Entry 	@12
+		    origin     	(1792, 3671)
+		    terminus   	(288, 3671)
+		    ordinal    	26)
+		(object InterMessView "Tipea el id de pedido" @121
+		    location   	(16, 5344)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @122
+			Parent_View 	@121
+			location   	(1039, 5300)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EDC201D5"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	356
+			justify    	0
+			label      	"Tipea el id de pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@14
+		    Focus_Entry 	@42
+		    origin     	(287, 5344)
+		    terminus   	(1792, 5344)
+		    ordinal    	38)
+		(object InterMessView "Envia Id del pedido" @123
+		    location   	(16, 5449)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @124
+			Parent_View 	@123
+			location   	(2239, 5405)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EE5202DE"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	324
+			justify    	0
+			label      	"Envia Id del pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@47
+		    Focus_Src  	@42
+		    Focus_Entry 	@59
+		    origin     	(1823, 5449)
+		    terminus   	(2656, 5449)
+		    ordinal    	39)
+		(object InterMessView "Retorna los datos" @125
+		    location   	(16, 5554)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @126
+			Parent_View 	@125
+			location   	(2240, 5510)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EE82039A"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	306
+			justify    	0
+			label      	"Retorna los datos"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@24
+		    Focus_Src  	@59
+		    Focus_Entry 	@43
+		    origin     	(2656, 5554)
+		    terminus   	(1824, 5554)
+		    ordinal    	40)
+		(object InterMessView "Muesta detalles del pedido" @127
+		    location   	(16, 5659)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @128
+			Parent_View 	@127
+			location   	(1040, 5615)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EEB20291"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	454
+			justify    	0
+			label      	"Muesta detalles del pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@2
+		    Focus_Src  	@42
+		    Focus_Entry 	@15
+		    origin     	(1792, 5659)
+		    terminus   	(288, 5659)
+		    ordinal    	41)
+		(object InterMessView "Confirma envio a domicilio y registra direccion de este" @129
+		    location   	(16, 5764)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @130
+			Parent_View 	@129
+			location   	(1039, 5720)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EEC100EA"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	900
+			justify    	0
+			label      	"Confirma envio a domicilio y registra direccion de este"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@14
+		    Focus_Entry 	@44
+		    origin     	(287, 5764)
+		    terminus   	(1792, 5764)
+		    ordinal    	42)
+		(object InterMessView "Esoje el transportista disponible" @131
+		    location   	(16, 5974)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @132
+			Parent_View 	@131
+			location   	(1039, 5930)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EFAF039A"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	544
+			justify    	0
+			label      	"Esoje el transportista disponible"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@14
+		    Focus_Entry 	@45
+		    origin     	(287, 5974)
+		    terminus   	(1792, 5974)
+		    ordinal    	43)
+		(object InterMessView "Manda los registros" @133
+		    location   	(16, 6079)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @134
+			Parent_View 	@133
+			location   	(2239, 6035)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EFC00252"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	338
+			justify    	0
+			label      	"Manda los registros"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@47
+		    Focus_Src  	@45
+		    Focus_Entry 	@60
+		    origin     	(1823, 6079)
+		    terminus   	(2656, 6079)
+		    ordinal    	44)
+		(object InterMessView "Confirma almacenamiento " @135
+		    location   	(16, 6184)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @136
+			Parent_View 	@135
+			location   	(2240, 6140)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EFD90186"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	454
+			justify    	0
+			label      	"Confirma almacenamiento"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@24
+		    Focus_Src  	@60
+		    Focus_Entry 	@46
+		    origin     	(2656, 6184)
+		    terminus   	(1824, 6184)
+		    ordinal    	45)
+		(object InterMessView "Muestra mensaje de guardado exitoso" @137
+		    location   	(16, 6289)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @138
+			Parent_View 	@137
+			location   	(1040, 6245)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EFEC0109"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	644
+			justify    	0
+			label      	"Muestra mensaje de guardado exitoso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@2
+		    Focus_Src  	@45
+		    Focus_Entry 	@16
+		    origin     	(1792, 6289)
+		    terminus   	(288, 6289)
+		    ordinal    	46)
+		(object Destruction_Marker @139
+		    Parent_View 	@2
+		    location   	(272, 6448)
+		    line_color 	3342489
+		    fill_color 	13434879)
+		(object Destruction_Marker @140
+		    Parent_View 	@17
+		    location   	(992, 5168)
+		    line_color 	3342489
+		    fill_color 	13434879)
+		(object InterMessView "Escoge el apartado de Productos" @141
+		    location   	(16, 1408)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @142
+			Parent_View 	@141
+			location   	(1039, 1364)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F05002DF"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	560
+			justify    	0
+			label      	"Escoge el apartado de Productos"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@5
+		    Focus_Entry 	@28
+		    origin     	(287, 1408)
+		    terminus   	(1792, 1408)
+		    ordinal    	7)
+		(object InterMessView "Retorna la ventana " @143
+		    location   	(16, 1513)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @144
+			Parent_View 	@143
+			location   	(1040, 1469)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F07D0158"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	319
+			justify    	0
+			label      	"Retorna la ventana"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@2
+		    Focus_Src  	@28
+		    Focus_Entry 	@6
+		    origin     	(1792, 1513)
+		    terminus   	(288, 1513)
+		    ordinal    	8)
+		(object InterMessView "Llena los campos para el registro de productos" @145
+		    location   	(16, 1618)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @146
+			Parent_View 	@145
+			location   	(1039, 1574)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F08901F4"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	791
+			justify    	0
+			label      	"Llena los campos para el registro de productos"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@5
+		    Focus_Entry 	@29
+		    origin     	(287, 1618)
+		    terminus   	(1792, 1618)
+		    ordinal    	9)
+		(object InterMessView "Muestra mensaje de productos a guardar" @147
+		    location   	(16, 1723)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @148
+			Parent_View 	@147
+			location   	(1040, 1679)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F0CA0196"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	694
+			justify    	0
+			label      	"Muestra mensaje de productos a guardar"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@2
+		    Focus_Src  	@29
+		    Focus_Entry 	@7
+		    origin     	(1792, 1723)
+		    terminus   	(288, 1723)
+		    ordinal    	10)
+		(object InterMessView "Confirna la accion" @149
+		    location   	(16, 1828)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @150
+			Parent_View 	@149
+			location   	(1039, 1784)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F0DB032C"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	307
+			justify    	0
+			label      	"Confirna la accion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@2
+		    supplier   	@24
+		    Focus_Src  	@5
+		    Focus_Entry 	@30
+		    origin     	(287, 1828)
+		    terminus   	(1792, 1828)
+		    ordinal    	11)
+		(object InterMessView "Manda la informaciona  a guardar" @151
+		    location   	(16, 1933)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @152
+			Parent_View 	@151
+			location   	(2239, 1889)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F0EA00AC"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	563
+			justify    	0
+			label      	"Manda la informaciona  a guardar"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@47
+		    Focus_Src  	@30
+		    Focus_Entry 	@50
+		    origin     	(1823, 1933)
+		    terminus   	(2656, 1933)
+		    ordinal    	12)
+		(object InterMessView "Confirma almacenamiento" @153
+		    location   	(16, 2038)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @154
+			Parent_View 	@153
+			location   	(2240, 1994)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F10B00EA"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	454
+			justify    	0
+			label      	"Confirma almacenamiento"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@47
+		    supplier   	@24
+		    Focus_Src  	@50
+		    Focus_Entry 	@31
+		    origin     	(2656, 2038)
+		    terminus   	(1824, 2038)
+		    ordinal    	13)
+		(object InterMessView "Muestra mensaje de exito" @155
+		    location   	(16, 2143)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object SegLabel @156
+			Parent_View 	@155
+			location   	(1040, 2099)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F1210158"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	435
+			justify    	0
+			label      	"Muestra mensaje de exito"
+			pctDist    	0.500000
+			height     	45
+			orientation 	1)
+		    line_color 	3342489
+		    client     	@24
+		    supplier   	@2
+		    Focus_Src  	@30
+		    Focus_Entry 	@8
+		    origin     	(1792, 2143)
+		    terminus   	(288, 2143)
+		    ordinal    	14)))
+	(object ObjectDiagram "D_Sec_Ferreteria_Teran"
+	    mechanism_ref 	@1
+	    quid       	"5BE7E32B02BF"
+	    title      	"D_Sec_Ferreteria_Teran"
+	    zoom       	100
+	    max_height 	28350
+	    max_width  	21600
+	    origin_x   	0
+	    origin_y   	0
+	    items      	(list diagram_item_list
+		(object ObjectView "Vended@r" @157
+		    location   	(144, 384)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@157
+			location   	(63, 336)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	162
+			justify    	0
+			label      	"Vended@r")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5BE7E0C30242"
+		    height     	118
+		    annotation 	4
+		    autoResize 	TRUE
+		    subobjects 	0
+		    x_offset   	0.000000
+		    y_offset   	0.000000)
+		(object ObjectView "Cajer@" @158
+		    location   	(944, 112)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@158
+			location   	(863, 64)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	162
+			justify    	0
+			label      	"Cajer@")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5BE7E0CA036B"
+		    height     	118
+		    annotation 	4
+		    autoResize 	TRUE
+		    subobjects 	0
+		    x_offset   	0.000000
+		    y_offset   	0.000000)
+		(object ObjectView "Sistema" @159
+		    location   	(2368, 384)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@159
+			location   	(2287, 336)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	162
+			justify    	0
+			label      	"Sistema")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5BE7E0DC038A"
+		    height     	118
+		    annotation 	4
+		    autoResize 	TRUE
+		    subobjects 	0
+		    x_offset   	0.000000
+		    y_offset   	0.000000)
+		(object ObjectView "BD" @160
+		    location   	(144, 928)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    label      	(object ItemLabel
+			Parent_View 	@160
+			location   	(63, 887)
+			fill_color 	13434879
+			nlines     	2
+			max_width  	162
+			justify    	0
+			label      	"BD")
+		    icon_style 	"Icon"
+		    line_color 	3342489
+		    fill_color 	13434879
+		    quidu      	"5BE7E0F103A9"
+		    height     	105
+		    annotation 	4
+		    autoResize 	TRUE
+		    subobjects 	0
+		    x_offset   	0.000000
+		    y_offset   	0.000000)
+		(object LinkSelfView "" @161
+		    location   	(144, 726)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5BE7E18F007D"
+		    client     	@160
+		    supplier   	@160
+		    vertices   	(list Points
+			(87, 876)
+			(201, 876))
+		    line_style 	4)
+		(object MessView "" @162
+		    location   	(144, 682)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @163
+			Parent_View 	@162
+			location   	(144, 466)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E18F007E"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Verifica Datos"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @164
+			Parent_View 	@162
+			location   	(144, 509)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E21A0252"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Realiza la consulta"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @165
+			Parent_View 	@162
+			location   	(144, 595)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA260119"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	232
+			justify    	0
+			label      	"Verifica ID"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @166
+			Parent_View 	@162
+			location   	(144, 638)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EAF5036B"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	801
+			justify    	0
+			label      	"Ejecuta y actualiza el stock de cada producto"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @167
+			Parent_View 	@162
+			location   	(144, 552)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E8830232"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	407
+			justify    	0
+			label      	"Almacena el registro"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@161
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	0
+		    dir        	1
+		    origin     	(84, 682)
+		    terminus   	(204, 682))
+		(object LinkSelfView "" @168
+		    location   	(144, 175)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5BE7E3D202DE"
+		    client     	@157
+		    supplier   	@157
+		    vertices   	(list Points
+			(87, 325)
+			(201, 325))
+		    line_style 	4)
+		(object LinkSelfView "" @169
+		    location   	(2368, 175)
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5BE7E5580280"
+		    client     	@159
+		    supplier   	@159
+		    vertices   	(list Points
+			(2311, 325)
+			(2425, 325))
+		    line_style 	4)
+		(object MessView "" @170
+		    location   	(2368, 131)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @171
+			Parent_View 	@170
+			location   	(2368, 87)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E6F702BF"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	666
+			justify    	0
+			label      	"Almacena temporalmente  el pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@169
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	0
+		    dir        	1
+		    origin     	(2308, 131)
+		    terminus   	(2428, 131))
+		(object LinkView "" @172
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5BE7E14D02CF"
+		    client     	@157
+		    supplier   	@159
+		    vertices   	(list Points
+			(234, 384)
+			(2277, 384))
+		    line_style 	0)
+		(object MessView "" @173
+		    location   	(1255, 340)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @174
+			Parent_View 	@173
+			location   	(1255, 0)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E14D02D0"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	400
+			justify    	0
+			label      	"Ingresa credenciales"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @175
+			Parent_View 	@173
+			location   	(1255, 124)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E204032C"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	453
+			justify    	0
+			label      	"Consulta Id de producto"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @176
+			Parent_View 	@173
+			location   	(1255, 167)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E6BC01C5"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	507
+			justify    	0
+			label      	"Agrega productos al carrito"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @177
+			Parent_View 	@173
+			location   	(1255, 210)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E7930119"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	580
+			justify    	0
+			label      	"Confirma detalles del producto"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @178
+			Parent_View 	@173
+			location   	(1255, 253)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EDC201D5"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	418
+			justify    	0
+			label      	"Tipea el id de pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @179
+			Parent_View 	@173
+			location   	(1255, 296)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EFAF039A"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	604
+			justify    	0
+			label      	"Esoje el transportista disponible"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @180
+			Parent_View 	@173
+			location   	(1255, 0)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F05002DF"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	601
+			justify    	0
+			label      	"Escoge el apartado de Productos"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @181
+			Parent_View 	@173
+			location   	(1255, 38)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F08901F4"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	851
+			justify    	0
+			label      	"Llena los campos para el registro de productos"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @182
+			Parent_View 	@173
+			location   	(1255, 81)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F0DB032C"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	369
+			justify    	0
+			label      	"Confirna la accion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@172
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	0
+		    dir        	1
+		    origin     	(1195, 340)
+		    terminus   	(1315, 340))
+		(object MessView "" @183
+		    location   	(1255, 429)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @184
+			Parent_View 	@183
+			location   	(1255, 474)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E1CA00AC"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Acepta el acceso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @185
+			Parent_View 	@183
+			location   	(1255, 517)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E26102CF"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	485
+			justify    	0
+			label      	"Despliega la informacion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @186
+			Parent_View 	@183
+			location   	(1255, 603)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E92801D5"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	407
+			justify    	0
+			label      	"Genera Id de pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @187
+			Parent_View 	@183
+			location   	(1255, 560)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E8EB0203"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	504
+			justify    	0
+			label      	"Retorna el registro exitoso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@172
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	1
+		    dir        	-1
+		    origin     	(1314, 429)
+		    terminus   	(1196, 429))
+		(object LinkView "" @188
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5BE7F05002DE"
+		    client     	@157
+		    supplier   	@158
+		    vertices   	(list Points
+			(234, 353)
+			(853, 142))
+		    line_style 	0)
+		(object LinkView "" @189
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5BE7E1A402DE"
+		    client     	@158
+		    supplier   	@159
+		    vertices   	(list Points
+			(1034, 129)
+			(2277, 366))
+		    line_style 	0)
+		(object MessView "" @190
+		    location   	(1663, 204)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @191
+			Parent_View 	@190
+			location   	(1671, 75)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E1A402DF"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	408
+			justify    	0
+			label      	"Ingresa Credenciales"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @192
+			Parent_View 	@190
+			location   	(1671, 118)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E97500BB"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	412
+			justify    	0
+			label      	"Ingresa id de pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @193
+			Parent_View 	@190
+			location   	(1671, 161)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA6D0213"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	692
+			justify    	0
+			label      	"Regista el monto de pago  del pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@189
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	0
+		    dir        	1
+		    origin     	(1604, 193)
+		    terminus   	(1722, 215))
+		(object MessView "" @194
+		    location   	(1648, 291)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @195
+			Parent_View 	@194
+			location   	(1641, 335)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E1B202A0"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Acepta el acceso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @196
+			Parent_View 	@194
+			location   	(1641, 378)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA5601F4"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	435
+			justify    	0
+			label      	"Muesta la informacion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @197
+			Parent_View 	@194
+			location   	(1641, 421)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EB3600EA"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	566
+			justify    	0
+			label      	"Genera comprobante de pago"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@189
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	1
+		    dir        	-1
+		    origin     	(1706, 301)
+		    terminus   	(1590, 281))
+		(object LinkView "" @198
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5BE7E1840271"
+		    client     	@159
+		    supplier   	@160
+		    vertices   	(list Points
+			(2277, 405)
+			(234, 905))
+		    line_style 	0)
+		(object MessView "" @199
+		    location   	(1266, 699)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @200
+			Parent_View 	@199
+			location   	(1744, 861)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E1840272"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Envia Credenciales"
+			pctDist    	-3.140890
+			height     	272
+			orientation 	0)
+		    label      	(object SegLabel @201
+			Parent_View 	@199
+			location   	(1744, 947)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E20F036B"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Envia peticion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @202
+			Parent_View 	@199
+			location   	(1744, 990)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E85A01C5"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	373
+			justify    	0
+			label      	"Registra el pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @203
+			Parent_View 	@199
+			location   	(1744, 1033)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA1502EE"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	382
+			justify    	0
+			label      	"Envia ID de pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @204
+			Parent_View 	@199
+			location   	(1744, 1076)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EAA6005E"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	476
+			justify    	0
+			label      	"Almacena la informacion"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @205
+			Parent_View 	@199
+			location   	(1744, 1119)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EE5202DE"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	384
+			justify    	0
+			label      	"Envia Id del pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @206
+			Parent_View 	@199
+			location   	(1744, 1162)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EFC00252"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	398
+			justify    	0
+			label      	"Manda los registros"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @207
+			Parent_View 	@199
+			location   	(1744, 904)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F0EA00AC"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	623
+			justify    	0
+			label      	"Manda la informaciona  a guardar"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@198
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	0
+		    dir        	1
+		    origin     	(1323, 685)
+		    terminus   	(1209, 713))
+		(object MessView "" @208
+		    location   	(1245, 612)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @209
+			Parent_View 	@208
+			location   	(1236, 268)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E19A02DE"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	450
+			justify    	0
+			label      	"Envia Respuesta"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @210
+			Parent_View 	@208
+			location   	(1236, 354)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E2320213"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	566
+			justify    	0
+			label      	"Devuelve detalles del producto"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @211
+			Parent_View 	@208
+			location   	(1236, 440)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EA49039A"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	488
+			justify    	0
+			label      	"Retorna datos del pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @212
+			Parent_View 	@208
+			location   	(1236, 483)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EB0303B9"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	491
+			justify    	0
+			label      	"Retorna Guadado exitoso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @213
+			Parent_View 	@208
+			location   	(1236, 397)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7E8D8004E"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	873
+			justify    	0
+			label      	"Confirma el almacenamiento pendiente de pago"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @214
+			Parent_View 	@208
+			location   	(1236, 526)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EE82039A"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	368
+			justify    	0
+			label      	"Retorna los datos"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @215
+			Parent_View 	@208
+			location   	(1236, 569)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EFD90186"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	516
+			justify    	0
+			label      	"Confirma almacenamiento"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @216
+			Parent_View 	@208
+			location   	(1236, 311)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F10B00EA"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	516
+			justify    	0
+			label      	"Confirma almacenamiento"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@198
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	1
+		    dir        	-1
+		    origin     	(1187, 625)
+		    terminus   	(1303, 599))
+		(object LinkView "" @217
+		    stereotype 	TRUE
+		    line_color 	3342489
+		    quidu      	"5BE7EEB20290"
+		    client     	@159
+		    supplier   	@157
+		    vertices   	(list Points
+			(2277, 384)
+			(234, 384))
+		    line_style 	0)
+		(object MessView "" @218
+		    location   	(1256, 429)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @219
+			Parent_View 	@218
+			location   	(1256, 603)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EEB20291"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	516
+			justify    	0
+			label      	"Muesta detalles del pedido"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @220
+			Parent_View 	@218
+			location   	(1256, 646)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EFEC0109"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	704
+			justify    	0
+			label      	"Muestra mensaje de guardado exitoso"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @221
+			Parent_View 	@218
+			location   	(1256, 474)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F07D0158"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	360
+			justify    	0
+			label      	"Retorna la ventana"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @222
+			Parent_View 	@218
+			location   	(1256, 517)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F0CA0196"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	751
+			justify    	0
+			label      	"Muestra mensaje de productos a guardar"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    label      	(object SegLabel @223
+			Parent_View 	@218
+			location   	(1256, 560)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7F1210158"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	495
+			justify    	0
+			label      	"Muestra mensaje de exito"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@217
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	0
+		    dir        	1
+		    origin     	(1315, 429)
+		    terminus   	(1197, 429))
+		(object MessView "" @224
+		    location   	(1256, 340)
+		    font       	(object Font
+			size       	9
+			face       	"Arial"
+			bold       	FALSE
+			italics    	FALSE
+			underline  	FALSE
+			strike     	FALSE
+			color      	0
+			default_color 	TRUE)
+		    line_color 	3342489
+		    label      	(object SegLabel @225
+			Parent_View 	@224
+			location   	(1256, 296)
+			font       	(object Font
+			    size       	9
+			    face       	"Arial"
+			    bold       	FALSE
+			    italics    	FALSE
+			    underline  	FALSE
+			    strike     	FALSE
+			    color      	0
+			    default_color 	TRUE)
+			quidu      	"5BE7EEC100EA"
+			anchor_loc 	1
+			nlines     	1
+			max_width  	960
+			justify    	0
+			label      	"Confirma envio a domicilio y registra direccion de este"
+			pctDist    	0.500000
+			height     	45
+			orientation 	0)
+		    object_arc 	@217
+		    pctDist    	0.500000
+		    height     	45
+		    orientation 	1
+		    dir        	-1
+		    origin     	(1196, 340)
+		    terminus   	(1316, 340))))))
